@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="@color/white"
+    tools:context=".LayerFrgmt">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:background="#f8f8f8"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingLeft="16dp"
+        android:paddingEnd="0dp"
+        android:paddingRight="0dp"
+        android:text="layer1包含：view1,view2,view3,view4,view5\nlayer2包含：view2,view6,view7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layerTitle" />
+
+    <TextView
+        android:id="@+id/layerView1"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/layer_bg"
+        android:gravity="center"
+        android:text="View1"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/layerView3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTag="view1"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/layerView2"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/purple_200"
+        android:gravity="center"
+        android:text="View2"
+        android:textColor="@color/white"
+        app:layout_goneMarginTop="32dp"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTag="view1"
+        app:layout_constraintTop_toBottomOf="@+id/layerView4" />
+
+    <TextView
+        android:id="@+id/layerView5"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@color/purple_200"
+        android:gravity="center"
+        android:text="View5"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintCircle="@+id/layerView2"
+        app:layout_constraintCircleAngle="120"
+        app:layout_constraintCircleRadius="100dp"
+        app:layout_constraintStart_toEndOf="@+id/layerView2"
+        app:layout_constraintTag="view1"
+        app:layout_constraintTop_toBottomOf="@+id/layerView2" />
+
+    <TextView
+        android:id="@+id/layerView6"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@color/purple_200"
+        android:gravity="center"
+        android:text="View6"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintCircle="@+id/layerView2"
+        app:layout_constraintCircleAngle="137"
+        app:layout_constraintCircleRadius="200dp"
+        app:layout_constraintStart_toStartOf="@+id/layerView2"
+        app:layout_constraintTag="view1"
+        app:layout_constraintTop_toBottomOf="@+id/layerView2" />
+
+    <TextView
+        android:id="@+id/layerView4"
+        android:layout_width="164dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:background="#f9019e"
+        android:gravity="center"
+        android:text="View4"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/layerView1"
+        app:layout_constraintTag="view1"
+        app:layout_constraintTop_toTopOf="@+id/layerView1" />
+
+    <TextView
+        android:id="@+id/layerView7"
+        android:layout_width="36dp"
+        android:layout_height="128dp"
+        android:background="#f9019e"
+        android:gravity="center"
+        android:text="View7"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/layerView5"
+        app:layout_constraintStart_toStartOf="@+id/layerView2"
+        app:layout_constraintTag="view1"
+        app:layout_constraintTop_toBottomOf="@+id/layerView5" />
+
+    <TextView
+        android:id="@+id/layerView3"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/purple_200"
+        android:gravity="center"
+        android:text="view3"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/layerView1"
+        app:layout_constraintTag="view1"
+        app:layout_constraintTop_toTopOf="@+id/layerView1" />
+
+    <TextView
+        android:id="@+id/layerTitle"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:text="layer 示例"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.helper.widget.Layer
+        android:id="@+id/layer1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="32dp"
+        android:padding="8dp"
+        android:visibility="visible"
+        app:constraint_referenced_ids="layerView1,layerView2,layerView3,layerView4,layerView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+
+    <ToggleButton
+        android:id="@+id/layer1Tint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="32dp"
+        android:textOff="layer1去色"
+        android:textOn="layer1上色"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layerView7" />
+
+    <ToggleButton
+        android:id="@+id/layer2Tint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:textAllCaps="false"
+        android:textOff="layer2去色"
+        android:textOn="layer2上色"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layer1Tint" />
+
+    <Button
+        android:id="@+id/layer1Anim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="layer1 alpha"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/layer1Hidden"
+        app:layout_constraintTop_toBottomOf="@+id/layerView7" />
+
+    <Button
+        android:id="@+id/layer2Anim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="layer2 rotation"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/layer1Hidden"
+        app:layout_constraintTop_toTopOf="@+id/layer2Hidden" />
+
+    <ToggleButton
+        android:id="@+id/layer1Hidden"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:checked="true"
+        android:textOff="layer1隐藏"
+        android:textOn="layer1显示"
+        app:layout_constraintEnd_toStartOf="@+id/layer1Anim"
+        app:layout_constraintStart_toEndOf="@+id/layer1Tint"
+        app:layout_constraintTop_toTopOf="@+id/layer1Tint" />
+
+    <ToggleButton
+        android:id="@+id/layer2Hidden"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:textAllCaps="false"
+        android:textOff="layer2隐藏"
+        android:textOn="layer2显示"
+        app:layout_constraintEnd_toStartOf="@+id/layer1Anim"
+        app:layout_constraintStart_toEndOf="@+id/layer1Tint"
+        app:layout_constraintTop_toTopOf="@+id/layer2Tint" />
+
+    <androidx.constraintlayout.helper.widget.Layer
+        android:id="@+id/layer2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:elevation="48dp"
+        app:layout_constraintDimensionRatio="H,16:9"
+        app:layout_goneMarginTop="32dp"
+        app:constraint_referenced_ids="layerView2,layerView7,layerView6,layerView7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layerView7" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

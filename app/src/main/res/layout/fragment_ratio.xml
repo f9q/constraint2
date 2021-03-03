@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:focusable="true"
+    android:clickable="true"
+    android:background="@color/white"
+    tools:context=".RatioFrgmt">
+
+    <TextView
+        android:id="@+id/ratioTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="ratio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ratioView1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/purple_200"
+        android:gravity="center"
+        android:text="ratio1 1.5"
+        app:layout_constraintHeight_percent="0.1"
+        android:textColor="@color/white"
+        app:layout_constraintDimensionRatio="1.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ratioTitle" />
+
+    <TextView
+        android:id="@+id/ratioView2"
+        android:layout_width="200dp"
+        android:layout_height="0dp"
+        android:background="@color/purple_200"
+        android:gravity="center"
+        android:text="ratio2 4:1"
+        android:textColor="@color/white"
+        app:layout_constraintDimensionRatio="4:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ratioView1"
+        app:layout_constraintTop_toTopOf="@+id/ratioView1" />
+
+    <TextView
+        android:id="@+id/ratioView3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/purple_200"
+        android:gravity="center"
+        android:text="ratio3 W,2.5"
+        android:textColor="@color/white"
+        app:layout_constraintDimensionRatio="W,2.5"
+        app:layout_constraintStart_toStartOf="@+id/ratioView1"
+        app:layout_constraintTop_toBottomOf="@+id/ratioView1"
+        app:layout_constraintWidth_percent="0.1"
+        />
+
+    <TextView
+        android:id="@+id/ratioView4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/purple_200"
+        android:gravity="center"
+        android:text="ratio4 h,1.5"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/ratioView3"
+        app:layout_constraintDimensionRatio="h,3:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ratioView3"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintWidth_percent="0.2" />
+
+    <TextView
+        android:id="@+id/ratioView5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/purple_200"
+        android:gravity="center"
+        android:text="ratio5 H,1.5 ,e,h,1:1"
+        android:textColor="@color/white"
+        app:layout_constraintDimensionRatio="w,2:4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ratioView4"
+        app:layout_constraintTop_toTopOf="@+id/ratioView3"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.2" />
+
+    <TextView
+        android:id="@+id/ratioView6"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="64dp"
+        android:background="@color/purple_200"
+        android:gravity="center"
+        android:text="View Min"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ratioView3"
+        app:layout_constraintWidth_min="wrap"
+        app:layout_constraintWidth_percent="0.0000001" />
+
+    <TextView
+        android:id="@+id/ratioView7"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:background="@color/purple_200"
+        android:gravity="center"
+        android:text="View Max"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@+id/ratioView6"
+        app:layout_constraintTop_toTopOf="@+id/ratioView6"
+        app:layout_constraintWidth_max="64dp" />
+
+    <TextView
+        android:id="@+id/pivot"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:background="@color/purple_200"
+        android:gravity="center"
+        android:text="pivot"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@+id/ratioView7"
+        app:layout_constraintTop_toTopOf="@+id/ratioView6"
+        app:layout_constraintWidth_max="64dp" />
+
+    <TextView
+        android:id="@+id/ratioView12"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@color/purple_700"
+        android:gravity="center"
+        android:text="Angle"
+        android:textColor="@color/white"
+        app:layout_constraintCircle="@+id/pivot"
+        app:layout_constraintCircleAngle="130"
+        app:layout_constraintCircleRadius="48dp"
+        />
+
+    <TextView
+        android:id="@+id/ratioView8"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/purple_200"
+        android:gravity="center"
+        android:text="width default spread"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ratioView7"
+        app:layout_constraintWidth_default="spread" />
+
+    <TextView
+        android:id="@+id/ratioView9"
+        android:layout_width="0dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/purple_200"
+        android:gravity="center"
+        android:text="width default wrap faasdfasdfasdfasdfasdfasdf"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/ratioView4"
+        app:layout_constraintStart_toStartOf="@+id/ratioView4"
+        app:layout_constraintTop_toBottomOf="@+id/ratioView8"
+        app:layout_constraintWidth_default="wrap" />
+
+    <TextView
+        android:id="@+id/ratioView10"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/purple_200"
+        android:gravity="center"
+        android:text="layout_width = wrap_content faasdfasdfasdfasdfasdfasdf"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/ratioView4"
+        app:layout_constraintStart_toStartOf="@+id/ratioView4"
+        app:layout_constraintTop_toBottomOf="@+id/ratioView9" />
+
+    <TextView
+        android:id="@+id/ratioView11"
+        android:layout_width="0dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/purple_200"
+        android:gravity="center"
+        android:text="layout_width = wrap_content faasdfasdfasdfasdfasdfasdf"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/ratioView4"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintStart_toStartOf="@+id/ratioView4"
+        app:layout_constraintTop_toBottomOf="@+id/ratioView10" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

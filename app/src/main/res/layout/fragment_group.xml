@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="@color/white"
+    tools:context=".GroupFrgmt">
+
+    <Button
+        android:id="@+id/group1Anim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="group 不支持动画"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="@+id/group1Btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/group1Btn"
+        app:layout_constraintTop_toTopOf="@+id/group1Btn" />
+
+    <TextView
+        android:id="@+id/groupTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="group 示例"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center_vertical"
+        android:background="#f8f8f8"
+        android:paddingStart="16dp"
+        android:paddingLeft="16dp"
+        android:paddingEnd="0dp"
+        android:paddingRight="0dp"
+        android:text="页面中的5个view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/groupTitle" />
+
+
+    <TextView
+        android:id="@+id/groupView1"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/purple_200"
+        android:gravity="center"
+        android:text="View1"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintTag="view1"
+        app:layout_constraintEnd_toStartOf="@+id/groupView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/groupView2"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@color/purple_500"
+        android:gravity="center"
+        android:text="View2"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintTag="view2"
+        app:layout_constraintEnd_toStartOf="@+id/groupView3"
+        app:layout_constraintStart_toEndOf="@+id/groupView1"
+        app:layout_constraintTop_toTopOf="@+id/groupView1" />
+
+    <TextView
+        android:id="@+id/groupView3"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@color/purple_500"
+        android:gravity="center"
+        android:text="View3"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintTag="view3"
+        app:layout_constraintEnd_toStartOf="@+id/groupView4"
+        app:layout_constraintStart_toEndOf="@+id/groupView2"
+        app:layout_constraintTop_toTopOf="@+id/groupView1" />
+
+    <TextView
+        android:id="@+id/groupView4"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@color/purple_500"
+        android:gravity="center"
+        android:text="View4"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintTag="view4"
+        app:layout_constraintEnd_toStartOf="@+id/groupView5"
+        app:layout_constraintStart_toEndOf="@+id/groupView3"
+        app:layout_constraintTop_toTopOf="@+id/groupView1" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group1"
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        android:layout_marginTop="16dp"
+        android:padding="64dp"
+        app:constraint_referenced_ids="groupView1,groupView2,groupView3,groupView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/group1Title" />
+
+
+    <TextView
+        android:id="@+id/group1Title"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="32dp"
+        android:background="#f8f8f8"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingLeft="16dp"
+        android:paddingEnd="0dp"
+        android:paddingRight="0dp"
+        android:text="group1 : 包含view1,view2,view3,view4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/groupView1" />
+
+
+
+    <ToggleButton
+        android:id="@+id/group1Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="32dp"
+        android:textAllCaps="false"
+        android:checked="true"
+        android:text="同时控制view1,view2,view3,view4的可见性"
+        android:textOff="group1已隐藏"
+        android:textOn="group1已显示"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/group1Title" />
+
+    <TextView
+        android:id="@+id/group2Title"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="32dp"
+        android:background="#f8f8f8"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingLeft="16dp"
+        android:paddingEnd="0dp"
+        android:paddingRight="0dp"
+        android:text="group2 : 包含view2,view3,view4,view5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/group1Btn" />
+
+    <TextView
+        android:id="@+id/groupView5"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@color/purple_200"
+        android:gravity="center"
+        android:text="View5"
+        app:layout_constraintTag="view5"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/groupView4"
+        app:layout_constraintTop_toTopOf="@+id/groupView1" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:constraint_referenced_tags="view2,view3,view4,view5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/group2Title" />
+
+    <ToggleButton
+        android:id="@+id/group2Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="32dp"
+        android:textAllCaps="false"
+        android:text="同时控制view1,view2,view3,view4的可见性"
+        android:textOff="group2已隐藏"
+        android:textOn="group2已显示"
+        android:checked="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/group2Title" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

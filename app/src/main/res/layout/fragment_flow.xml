@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".FlowFrgmt">
+
+    <TextView
+        android:id="@+id/flowTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="flow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flow1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="#fff8f8f8"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:visibility="visible"
+        app:flow_wrapMode="none"
+        app:constraint_referenced_ids="flowView1,flowView2,flowView3,flowView4,flowView5,flowView6"
+        app:flow_horizontalGap="8dp"
+        app:flow_horizontalBias="0.5"
+        app:flow_horizontalStyle="packed"
+        app:layout_constraintDimensionRatio="h,2:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flowTitle" />
+
+    <TextView
+        android:id="@+id/flow1_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="horizontal flow"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/flow1"
+        app:layout_constraintTop_toTopOf="@+id/flow1" />
+
+
+    <TextView
+        android:id="@+id/flowView1"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:background="@color/teal_700"
+        android:gravity="center"
+        android:text="flow view1"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        />
+
+    <TextView
+        android:id="@+id/flowView2"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:background="@color/teal_700"
+        android:gravity="center"
+        android:text="flow view2"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        />
+
+    <TextView
+        android:id="@+id/flowView3"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:background="@color/teal_700"
+        android:gravity="center"
+        android:text="flow view3"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        />
+
+
+    <TextView
+        android:id="@+id/flowView4"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:background="@color/teal_700"
+        android:gravity="center"
+        android:text="flow view4"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        />
+
+    <TextView
+        android:id="@+id/flowView5"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:background="@color/teal_700"
+        android:gravity="center"
+        android:text="flow view5"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        />
+
+    <TextView
+        android:id="@+id/flowView6"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:background="@color/teal_700"
+        android:gravity="center"
+        android:text="flow view6"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        />
+
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flow2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="#f8f8f8"
+        android:padding="16dp"
+        android:visibility="visible"
+        android:orientation="vertical"
+        app:constraint_referenced_ids="flowView14,flowView13,flowView7,flowView8,flowView9,flowView10,flowView11,flowView12,flowView15,flowView16"
+        app:flow_horizontalAlign="start"
+        app:flow_horizontalGap="8dp"
+        app:flow_maxElementsWrap="4"
+        app:flow_verticalGap="16dp"
+        app:flow_verticalStyle="packed"
+        app:flow_wrapMode="aligned"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flow_1_visible" />
+
+    <TextView
+        android:id="@+id/flowView7"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:background="@color/teal_700"
+        android:gravity="center"
+        android:text="flow view7"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        />
+
+    <TextView
+        android:id="@+id/flowView8"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:background="@color/teal_700"
+        android:gravity="center"
+        android:text="flow view8"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        />
+
+    <TextView
+        android:id="@+id/flowView10"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:background="@color/teal_700"
+        android:gravity="center"
+        android:text="flow view10"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        />
+
+    <TextView
+        android:id="@+id/flowView12"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:background="@color/teal_700"
+        android:gravity="center"
+        android:text="flow view12"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        />
+
+    <TextView
+        android:id="@+id/flowView15"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:background="@color/teal_700"
+        android:gravity="center"
+        android:text="flow view15"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        />
+
+    <TextView
+        android:id="@+id/flowView16"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:background="@color/teal_700"
+        android:gravity="center"
+        android:text="flow view16"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        />
+
+    <TextView
+        android:id="@+id/flowView13"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:background="@color/teal_700"
+        android:gravity="center"
+        android:text="flow view13"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        />
+
+    <TextView
+        android:id="@+id/flowView14"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:background="@color/teal_700"
+        android:gravity="center"
+        android:text="flow view14"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        />
+
+    <TextView
+        android:id="@+id/flowView11"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:background="@color/teal_700"
+        android:gravity="center"
+        android:text="flow view11"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        />
+
+    <TextView
+        android:id="@+id/flowView9"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:background="@color/teal_700"
+        android:gravity="center"
+        android:text="flow view9"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        />
+
+
+    <TextView
+        android:id="@+id/flow2_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="vertical flow"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/flow2"
+        app:layout_constraintTop_toTopOf="@+id/flow2" />
+
+    <Button
+        android:id="@+id/wrapNone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="wrap = none"
+        android:textAllCaps="false"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/wrapChain"
+        app:layout_constraintStart_toStartOf="@+id/flow1"
+        app:layout_constraintTop_toBottomOf="@+id/flow1"
+        />
+
+    <ToggleButton
+        android:id="@+id/flow_1_visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="flow1 visiable"
+        android:textAllCaps="false"
+        android:textSize="12sp"
+        android:checked="true"
+        android:textOn="flow1 可见"
+        android:textOff="flow1 不可见"
+        app:layout_constraintEnd_toStartOf="@+id/wrapChain"
+        app:layout_constraintStart_toStartOf="@+id/flow1"
+        app:layout_constraintTop_toBottomOf="@+id/wrapNone" />
+
+    <Button
+        android:id="@+id/wrapChain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="wrap = chain"
+        android:textAllCaps="false"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/wrapAlign"
+        app:layout_constraintStart_toEndOf="@+id/wrapNone"
+        app:layout_constraintTop_toBottomOf="@+id/flow1" />
+
+    <Button
+        android:id="@+id/flow1Anim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="flow1 animator"
+        android:textAllCaps="false"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/flow_1_visible"
+        app:layout_constraintEnd_toStartOf="@+id/wrapAlign"
+        app:layout_constraintStart_toEndOf="@+id/flow_1_visible"
+        app:layout_constraintTop_toTopOf="@+id/flow_1_visible" />
+
+    <Button
+        android:id="@+id/wrapAlign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="wrap = align"
+        android:textAllCaps="false"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/wrapChain"
+        app:layout_constraintTop_toBottomOf="@+id/flow1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
