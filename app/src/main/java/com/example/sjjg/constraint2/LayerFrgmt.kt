@@ -16,7 +16,6 @@ class LayerFrgmt : Fragment() {
 
     lateinit var binding: FragmentLayerBinding
 
-
     val layer1Tint  = object : CompoundButton.OnCheckedChangeListener{
         override fun onCheckedChanged(buttonView: CompoundButton?, isChecked: Boolean) {
             val color1 = if (isChecked){
